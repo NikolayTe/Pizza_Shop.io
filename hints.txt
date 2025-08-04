@@ -1,0 +1,10 @@
+sourece env/bin/activate    - запустить вирт окружение
+
+psql -U edmin -d mydb       -  Зайти с терминала в бд
+или
+su postgres
+psql
+
+
+flask db migrate            - Миграция после изменения модели данных
+flask db upgrade
