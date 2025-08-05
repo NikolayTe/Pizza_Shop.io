@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Занимает весь экран */
+}
+
+/* HEADER */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.logo_name {
+    font-size: 20px;
+    color: orange;
+    margin-left: 10px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.logo_image {
+    width: 40px;   /* Ширина */
+    height: 40px;  /* Высота */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid orange;
+    color: orange;
+}
+
+.btn-login:hover {
+    background: #ffd7a6;
+}
+
+.btn-signup {
+    background: orange;
+    border: 1px solid orange;
+    color: white;
+}
+
+.btn-signup:hover {
+    background: #e67e00;
+}
+
+footer {
+    background-color: white;
+    padding: 20px 0;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Прижимает вниз */
+
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #FF8C00; /* Оранжевый цвет текста */
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #FF8C00; /* Оранжевый при наведении */
+}
+
+
+/* Create item */
+.form-container {
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #ff8c00;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+.btn-submit {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #e67e00;
+}
+
+.form-text {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+input[type="text"],
+        input[type="number"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        
+/* Стили для корзины */
+.cart-container {
+    display: inline-block;
+    margin-right: -80px;
+}
+
+.cart-link {
+    display: flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.cart-link:hover {
+    color: #e67e00;
+}
+
+.cart-counter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-left: 8px;
+    line-height: 1;
+}
+
+/* Иконка корзины (Font Awesome) */
+.fa-shopping-cart {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.admin-management {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+.admin-management:hover {
+    color: orange;
+}
+
+
+/* MAIN CONTENT */
+        .main-content {
+            display: flex;
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 20px;
+            gap: 30px;
+            flex-grow: 1;
+        }
+
+        /* Products List */
+         .name-category {
+            display: flex;         /* Используем flexbox */
+            justify-content: center; /* Горизонтальное центрирование */
+            align-items: center;   /* Вертикальное центрирование (если нужно) */
+            width: 100%;
+            color: #ff8c00;
+            margin-top: 14px;
+
+        }
+        .products-list {
+            flex: 1;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .products-list h2 {
+            color: #ff8c00;
+            margin-bottom: 0px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .product-item {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+
+        .product-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .product-category {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #666;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .product-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            max-width: 400px;
+        }
+
+        .product-details {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .action-btn {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Add Product Form */
+        .form-container {
+            width: 450px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: sticky;
+            top: 90px;
+            align-self: flex-start;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #ff8c00;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .col {
+            flex: 1;
+        }
+
+        .btn-submit {
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #e67e00;
+        }
+
+        .form-text {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        /* Затемненный фон */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+
+        /* Само модальное окно */
+        .modal {
+            position: fixed;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            width: 700px;
+            animation: modalFadeIn 0.4s;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                    opacity: 0;
+                    transform: translate(-50%, -30%); /* Начинаем немного выше центра */
+                }
+                to {
+                    opacity: 1;
+                    transform: translate(-50%, -50%); /* Заканчиваем точно по центру */
+                }
+        }
+
+        .close-modal-btn {
+            float: right;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .close-modal-btn:hover {
+            color: #e67e00;
+        }
+
+        .modal-content {
+            margin-top: 20px;
+        }
+        
+        .modal-product-content {
+            display: flex;
+            gap: 30px;
+        }
+        .modal-product-image {
+            width: 250px;
+            height: 250px;
+            object-fit: contain;
+            border: 1px solid #eee;
+            border-radius: 5px;
+        }
+        .modal-product-details {
+            flex: 1;
+        }
+        .modal-product-title {
+            margin-top: 0;
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .modal-product-price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e67e00;
+            /* margin: 15px 0; */
+        }
+
+        .product-modal-weight, .product-modal-calories {
+            font-size: 13px;
+            color: #888;
+            width: 30px;
+        }
+        
+        .product-modal-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ff8c00;
+            margin-bottom: 15px;
+        }
+        .product-meta {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+
+        }
+        .modal-add-to-cart {
+            color: blue;
+        }
